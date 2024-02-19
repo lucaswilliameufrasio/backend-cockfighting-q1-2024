@@ -5,6 +5,7 @@ services:
     image: lucaswilliameufrasio/backend-cockfighting-q1-2024-api:latest
     hostname: api01
     environment:
+      - TZ=UTC
       - PORT=9997
       - DATABASE_URL=postgres://postgres:fight@db:5432/fight
     networks:

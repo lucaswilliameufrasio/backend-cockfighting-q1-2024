@@ -5,7 +5,7 @@ services:
     image: postgres:latest
     container_name: backend-cockfighting-2024-q1-dev-database
     restart: always
-    environment: 
+    environment:
       - POSTGRES_PASSWORD=fight
       - POSTGRES_DB=fight
     volumes:
