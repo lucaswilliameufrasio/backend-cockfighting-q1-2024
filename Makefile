@@ -23,7 +23,15 @@ stop-dev-compose-services:
 	$ docker volume rm golang-pgx_postgres_data
 PHONY: stop-compose-services
 
+build-image:
+	$ docker build --no-cache -t lucaswilliameufrasio/backend-cockfighting-q1-2024-api --progress=plain -f ./Dockerfile .
+PHONY: build-image
+
+push-image:
+	$ docker push lucaswilliameufrasio/backend-cockfighting-q1-2024-api
+PHONY: push-image
+
 install-air:
-	go install github.com/cosmtrek/air@latest
-	asdf reshim golang
+	$ go install github.com/cosmtrek/air@latest
+	$ asdf reshim golang
 .PHONY: install-air
