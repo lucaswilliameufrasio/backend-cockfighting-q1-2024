@@ -2,6 +2,10 @@ setup:
 	$ make install-air
 .PHONY: setup
 
+run:
+	$ go build -o ./tmp/backend-cockfighting-2024-q1 cmd/api/main.go && TZ=UTC APP_ENV=development PORT=9988 DATABASE_URL=postgres://postgres:fight@127.0.0.1:5458/fight ./tmp/backend-cockfighting-2024-q1
+.PHONY: run
+
 dev:
 	$ air -c .air.toml
 .PHONY: dev
