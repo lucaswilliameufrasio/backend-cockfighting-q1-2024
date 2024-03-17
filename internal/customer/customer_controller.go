@@ -142,7 +142,7 @@ func (tctx CustomerController) LoadStatement(w http.ResponseWriter, r *http.Requ
 			Type:        transaction.Type,
 			Value:       transaction.Value,
 			Description: transaction.Description,
-			CreatedAt:   time.Now().Format(time.RFC3339),
+			CreatedAt:   transaction.CreatedAt.Format(time.RFC3339),
 		}
 		transactionsResponse = append(transactionsResponse, transactionResponse)
 	}
