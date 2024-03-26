@@ -46,7 +46,7 @@ func main() {
 
 	err = dbPool.Ping(ctx)
 	if err != nil {
-		fmt.Fprintf(os.Stderr, "Unable to ping the databse: %v\n", err)
+		fmt.Fprintf(os.Stderr, "Unable to ping the database: %v\n", err)
 		os.Exit(1)
 	}
 
